@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@myorg/is-even": ["packages/libs/is-even/src/index.ts"]
+      "@myorg/my-lambda": ["packages/libs/my-lambda/src/index.ts"],
+      "@myorg/my-lib": ["packages/libs/my-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'my-app',
+  displayName: 'my-lambda',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/packages/apps/my-app',
+  coverageDirectory: '../../../coverage/packages/libs/my-lambda',
 };

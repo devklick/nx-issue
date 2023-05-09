@@ -1,21 +1,31 @@
 {
-  "name": "is-even",
+  "name": "my-lambda",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/libs/is-even/src",
+  "sourceRoot": "packages/libs/my-lambda/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/libs/my-lambda",
+        "main": "packages/libs/my-lambda/src/index.ts",
+        "tsConfig": "packages/libs/my-lambda/tsconfig.lib.json",
+        "assets": ["packages/libs/my-lambda/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/libs/is-even/**/*.ts"]
+        "lintFilePatterns": ["packages/libs/my-lambda/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/libs/is-even/jest.config.ts",
+        "jestConfig": "packages/libs/my-lambda/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
